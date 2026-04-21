@@ -1,0 +1,47 @@
+# 模型压缩实验配置
+# ============================================================
+
+# 实验名称
+experiment_name: "mnist_compression"
+
+# 数据集
+dataset:
+  name: "MNIST"
+  root: "./data"
+  img_size: 28
+  channels: 1
+  num_classes: 10
+
+# 模型配置 (修改这里放大网络)
+model:
+  type: "CNN"
+  layers: 2                          # 卷积层数量 (默认2层验证)
+  channels: [16, 32]                # 每层通道数
+  fc_hidden: 128                    # 全连接层隐含单元
+  dropout: 0.25
+
+# 训练配置
+train:
+  epochs: 2                         # 训练轮数
+  batch_size: 256
+  lr: 0.001
+  optimizer: "Adam"
+  weight_decay: 0.0
+
+# 剪枝配置
+prune:
+  enable: true
+  sparsity: 0.5                     # 剪枝稀疏度 (0.5 = 剪掉50%)
+  method: "l1_unstructured"         # l1_unstructured, random_unstructured, ln_structured
+
+# 量化配置
+quantize:
+  enable: true
+  method: "dynamic_int8"            # dynamic_int8, static_int8, qat
+  dtype: "qint8"
+
+# 输出配置
+output:
+  dir: "results"
+  save_models: true
+  verbose: true

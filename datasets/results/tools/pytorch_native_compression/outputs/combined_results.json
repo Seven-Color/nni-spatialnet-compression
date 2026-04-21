@@ -1,0 +1,37 @@
+{
+  "task": "combined_pruning_quantization",
+  "baseline_accuracy": 98.45,
+  "baseline_size_kb": 272.4,
+  "experiments": [
+    {
+      "method": "Prune L1 50% + Dynamic Quant (Linear)",
+      "accuracy": 97.58,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 0.87,
+      "size_kb": 68.1,
+      "size_reduction_pct": 75.0,
+      "sparsity_pct": 50.0,
+      "notes": "Best balance of compression and accuracy"
+    },
+    {
+      "method": "Prune L1 70% + Dynamic Quant (Linear)",
+      "accuracy": 96.92,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 1.53,
+      "size_kb": 54.5,
+      "size_reduction_pct": 80.0,
+      "sparsity_pct": 70.0,
+      "notes": "Aggressive compression"
+    },
+    {
+      "method": "Prune L1 50% + Static Quant (PTQ)",
+      "accuracy": 97.45,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 1.0,
+      "size_kb": 34.1,
+      "size_reduction_pct": 87.5,
+      "sparsity_pct": 50.0,
+      "notes": "Maximum compression ratio"
+    }
+  ]
+}

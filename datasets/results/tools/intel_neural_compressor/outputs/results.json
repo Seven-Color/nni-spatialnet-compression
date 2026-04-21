@@ -1,0 +1,6 @@
+{
+  "baseline": { "accuracy": 97.92, "params": 391854, "method": "4-layer SpatialNet (same as NNI)" },
+  "pruned": { "accuracy": 96.58, "method": "L1_unstructured_50% (simulated INC pruning)", "params": 391854 },
+  "quantized": { "accuracy": 97.41, "method": "PTQ_INT8", "params": 391854 },
+  "combined": { "accuracy": 96.32, "method": "Prune50% + PTQ_INT8" }
+}

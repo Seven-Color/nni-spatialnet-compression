@@ -1,0 +1,40 @@
+{
+  "task": "pruning",
+  "baseline_accuracy": 98.45,
+  "baseline_size_kb": 272.4,
+  "baseline_params": 69826,
+  "experiments": [
+    {
+      "method": "L1 Unstructured 50%",
+      "accuracy": 97.82,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 0.63,
+      "sparsity_pct": 50.0,
+      "notes": "Random unstructured weight pruning based on L1 norm"
+    },
+    {
+      "method": "L1 Unstructured 70%",
+      "accuracy": 97.15,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 1.3,
+      "sparsity_pct": 70.0,
+      "notes": "Aggressive L1 pruning, still maintains good accuracy"
+    },
+    {
+      "method": "Random Unstructured 30%",
+      "accuracy": 97.95,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 0.5,
+      "sparsity_pct": 30.0,
+      "notes": "Random weight pruning, less intelligent but simple"
+    },
+    {
+      "method": "Ln Structured 40% (dim=0)",
+      "accuracy": 96.78,
+      "baseline_accuracy": 98.45,
+      "accuracy_drop": 1.67,
+      "sparsity_pct": 40.0,
+      "notes": "Channel-wise pruning, modifies network structure"
+    }
+  ]
+}

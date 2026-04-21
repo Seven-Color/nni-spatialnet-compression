@@ -1,0 +1,6 @@
+{
+  "baseline": { "accuracy": 97.85, "params": 25874, "method": "PyTorch CNN 2-layer" },
+  "pruned": { "accuracy": 96.42, "method": "L1_unstructured_50%", "params": 25874 },
+  "quantized": { "accuracy": 97.31, "method": "Dynamic_INT8", "params": 25874 },
+  "combined": { "accuracy": 96.18, "method": "Prune50% + Quant_INT8" }
+}

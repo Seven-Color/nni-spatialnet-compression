@@ -1,0 +1,6 @@
+{
+  "baseline": { "accuracy": 97.72, "params": 124806, "method": "Lightweight CNN" },
+  "pruned": { "accuracy": 96.21, "method": "L1_unstructured_40% (AMM-style pruning)", "params": 124806 },
+  "quantized": { "accuracy": 97.18, "method": "Dynamic_INT8", "params": 124806 },
+  "combined": { "accuracy": 95.89, "method": "Prune40% + Quant_INT8" }
+}

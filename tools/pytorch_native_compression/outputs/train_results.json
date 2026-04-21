@@ -1,0 +1,7 @@
+{
+  "task": "train",
+  "best_test_acc": 98.45,
+  "params": 69826,
+  "epochs": 3,
+  "model_architecture": "MnistCNN(16-32-64-10)"
+}
